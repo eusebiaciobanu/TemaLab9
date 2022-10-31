@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        Calculator calculator = new Calculator();
 
         System.out.println("--- Exercitiu #1 ---");
 
@@ -13,10 +14,10 @@ public class Main {
 
         System.out.println("--- Exercitiu #2 ---");
 
-        System.out.println("Rezultatul adunarii este: " + sum(2,3.4f));
-        System.out.println("Rezultatul scaderii este: " + substract(2.5f,3));
-        System.out.println("Rezultatul inmultirii este: " + multiplicate(4f,3));
-        System.out.println("Rezultatul impartirii este: " + division(6,3));
+        System.out.println("Rezultatul adunarii este: " + calculator.sum(2,3.4f));
+        System.out.println("Rezultatul scaderii este: " + calculator.substract(2.5f,3));
+        System.out.println("Rezultatul inmultirii este: " + calculator.multiplicate(4f,3));
+        System.out.println("Rezultatul impartirii este: " + calculator.division(6,3));
 
         System.out.println("--- Exercitiu #3 ---");
 
@@ -32,37 +33,67 @@ public class Main {
 
         System.out.println("--- Exercitiu #6 ---");
 
-        System.out.println("Restul impartirii este: " + divisionReminder(4,3));
+        System.out.println("Restul impartirii este: " + calculator.divisionReminder(4,3));
 
         System.out.println("--- Exercitiu #7 ---");
 
-        System.out.println("Restul conversiei este: " + convertFahrenheitToCelsius(77));
+        System.out.println("Restul conversiei este: " + calculator.convertFahrenheitToCelsius(77));
 
         System.out.println("--- Exercitiu #8 ---");
 
-        System.out.println("Restul conversiei este: " + convertInchToMeter(7));
+        System.out.println("Restul conversiei este: " + calculator.convertInchToMeter(7));
 
         System.out.println("--- Exercitiu #9 ---");
 
         printSpeed(180_000, 2, 30, 15);
+
+        LogicalOp op = new LogicalOp();
+
+        System.out.println("The biggest number is: " + op.getBiggestNumber(2,3));
+
+        System.out.println("FastTrackIt valid: " + op.checkFastTractIt("FastTrackIT"));
+        System.out.println("FastTrackIt invalid: " + op.checkFastTractIt("random"));
+
+        System.out.println("FastTrackIt and number: " + op.checkFastTractItAndNumber("FastTrackIT", 3));
+        System.out.println("FastTrackIt and number: " + op.checkFastTractItAndNumber("random", 10));
+        System.out.println("FastTrackIt and number: " + op.checkFastTractItAndNumber("FastTrackIT", 5));
+        System.out.println("FastTrackIt and number: " + op.checkFastTractItAndNumber("random", 2));
+
+        System.out.println("SnowForecast: " + op.snowForecast(10));
+        System.out.println("SnowForecast: " + op.snowForecast(6));
+        System.out.println("SnowForecast: " + op.snowForecast(7));
+
+        System.out.println("CompareWithThreeAndFour: " + op.compareWithThreeAndFour(5));
+        System.out.println("CompareWithThreeAndFour: " + op.compareWithThreeAndFour(4));
+        System.out.println("CompareWithThreeAndFour: " + op.compareWithThreeAndFour(2));
+        System.out.println("CompareWithThreeAndFour: " + op.compareWithThreeAndFour(3));
+
+        System.out.println("isNumberEven: " + op.isNumberEven(2));
+        System.out.println("isNumberEven: " + op.isNumberEven(3));
+
+        System.out.println("isEligibleToVote: " + op.isEligibleToVote(18));
+        System.out.println("isEligibleToVote: " + op.isEligibleToVote(17));
+
+        System.out.println("biggestNumber: " + op.biggestNumber(2, 7, 3));
+        System.out.println("biggestNumber: " + op.biggestNumber(3, 1, 2));
+        System.out.println("biggestNumber: " + op.biggestNumber(3, 1, 5));
+        System.out.println("biggestNumber: " + op.biggestNumber(3, 3, 3));
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {
-        int totalSeconds = seconds + 60 * minutes + 360 * hours;
-        float metersPerSecond = meters / totalSeconds;
+        Calculator calculator = new Calculator();
 
-        float totalHours = hours + (float) minutes / 60 + (float) seconds / 360;
-        float kilometers = meters / 1000;
+        float totalSeconds = calculator.calculateTotalSeconds(hours, minutes, seconds);
 
-        float kilometersPerHour = kilometers / totalHours;
+        float kilometers = calculator.convertMetersToKilometers(meters);
 
-        float miles = kilometers * 0.62137f;
+        float totalHours = calculator.convertSecondsToHours(totalSeconds);
 
-        float milesPerHour = miles / totalHours;
+        float kilometersPerHour = kilometers / calculator.convertSecondsToHours(totalSeconds);
 
-        System.out.println("Meters per second: " + metersPerSecond);
-        System.out.println("Kilometers per hour: " + kilometersPerHour);
-        System.out.println("Miles per hour: " + milesPerHour);
+        System.out.println("Meters per second: " + calculator.calculateMetersPerSecond(meters, totalSeconds));
+        System.out.println("Kilometers per hour: " + calculator.calculateKilometersPerHour(kilometers, totalHours));
+        System.out.println("Miles per hour: " + calculator.convertKilometersToMiles(kilometersPerHour));
     }
 
 
@@ -86,36 +117,6 @@ public class Main {
         System.out.println("  |   ^   |  ");
         System.out.println("  |  '-'  |  ");
         System.out.println("  +-------+  ");
-    }
-
-    private static float convertFahrenheitToCelsius(float value)
-    {
-        return (float) 5/9 * (value - 32);
-    }
-
-    private static float convertInchToMeter(float value)
-    {
-        return value * 0.0254f;
-    }
-
-    public static float sum(float first, float second) {
-        return first + second;
-    }
-
-    public static float substract(float first, float second){
-        return first - second;
-    }
-
-    public static float multiplicate(float first, float second){
-        return first * second;
-    }
-
-    public static float division(float first, float second){
-        return first / second;
-    }
-
-    public static float divisionReminder(float first, float second){
-        return first % second;
     }
 
     private static void exercitiuTemaVeche1()
