@@ -78,6 +78,48 @@ public class Main {
         System.out.println("biggestNumber: " + op.biggestNumber(3, 1, 2));
         System.out.println("biggestNumber: " + op.biggestNumber(3, 1, 5));
         System.out.println("biggestNumber: " + op.biggestNumber(3, 3, 3));
+
+        System.out.println("--- Tema for loops ---");
+
+        System.out.println("--- Exercitiu #1 ---");
+
+        op.printFromNumberTo100(20);
+
+        System.out.println("--- Exercitiu #2 ---");
+
+        op.printFromNumberToMinus100(10);
+
+        System.out.println("--- Exercitiu #3 ---");
+
+        op.printFromNumberToNumber(5, 15);
+
+        System.out.println("--- Exercitiu #4 ---");
+
+        op.printFromNumberToNumberIntelligent(2, 5);
+
+        System.out.println();
+
+        op.printFromNumberToNumberIntelligent(15, 5);
+
+        System.out.println("--- Exercitiu #5 ---");
+
+        op.printEvenNumbers();
+
+        System.out.println("--- Exercitiu #6 ---");
+
+        op.printOddNumbers();
+
+        System.out.println("--- Exercitiu #7 ---");
+
+        System.out.println("printSumInRange: " + op.printSumInRange(17));
+
+        System.out.println("--- Exercitiu #8 ---");
+
+        System.out.println("printAverageInRange: " + op.printAverageInRange( 53));
+
+        System.out.println("--- Exercitiu #9 ---");
+
+        op.printAsterisk(7);
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {
