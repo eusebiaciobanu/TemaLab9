@@ -120,6 +120,47 @@ public class Main {
         System.out.println("--- Exercitiu #9 ---");
 
         op.printAsterisk(7);
+
+        System.out.println("--- Tema while loops ---");
+
+        System.out.println("--- Exercitiu #1 ---");
+
+        op.printFromNumberTo100WithWhile(7);
+
+        System.out.println("--- Exercitiu #2 ---");
+
+        op.printFromNumberToMinus100WithWhile(7);
+
+        System.out.println("--- Exercitiu #3 ---");
+
+        op.printForNumberToNumberWithWhile(2, 8);
+
+        System.out.println("--- Exercitiu #4 ---");
+
+        op.printForNumberToNumberWithWhileIntelligent(8, 2);
+
+        System.out.println("--- Exercitiu #5 ---");
+
+        op.printEvenNumbersFromOneToOneHundred();
+
+        System.out.println("--- Exercitiu #6 ---");
+
+        op.printOddNumbersFromOneToHundred();
+
+        System.out.println("--- Exercitiu #7 ---");
+
+        op.printAverageSumFromInterval(111, 8899);
+
+        System.out.println("--- Exercitiu #8 ---");
+
+        System.out.println("getAverageOfNumberInRageDivisibleBySeven: " + op.getAverageOfNumberInRageDivisibleBySeven(1, 1000));
+
+        System.out.println("--- Exercitiu #9 ---");
+
+        op.printFibonacciNumbers(20);
+
+        System.out.println("--- Exercitiu #10 ---");
+        op.getprintCozaLozaWoza();
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {

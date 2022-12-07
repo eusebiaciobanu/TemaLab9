@@ -143,4 +143,149 @@ public class LogicalOp {
             System.out.println();
         }
     }
+
+    public void printFromNumberTo100WithWhile (int number){
+        int i = number;
+
+        while (i <= 100) {
+            System.out.println(i);
+
+            i++;
+        }
+    }
+
+    public void printFromNumberToMinus100WithWhile(int number){
+        int i = number;
+
+        while (i >= -100) {
+            System.out.println(i);
+
+            i--;
+        }
+    }
+
+    public void printForNumberToNumberWithWhile(int x, int y) {
+        int i = x;
+
+        while (i <= y) {
+            System.out.println(i);
+            i++;
+        }
+    }
+
+    public void printForNumberToNumberWithWhileIntelligent(int x, int y) {
+        int i = x;
+        int last = y;
+
+        if (x > y) {
+            i = y;
+            last = x;
+        }
+
+        while (i <= last) {
+            System.out.println(i);
+            i++;
+        }
+    }
+    public void printEvenNumbersFromOneToOneHundred () {
+        int number = 2;
+        while (number <= 100) {
+                System.out.println(number);
+
+            number += 2;
+        }
+    }
+    public void printOddNumbersFromOneToHundred () {
+        int number = 1;
+        while (number <= 99) {
+            System.out.println (number);
+
+            number += 2;
+        }
+    }
+
+    public void printAverageSumFromInterval(int start, int end) {
+        int count = end - start + 1;
+
+        int sum = 0;
+
+        int i = start;
+
+        while (i <= end) {
+            sum += i;
+
+            i++;
+        }
+
+        System.out.println ("Suma este:" + sum);
+
+        System.out.println ("Media este:" + (float) sum / count);
+    }
+
+    public float getAverageOfNumberInRageDivisibleBySeven (int first, int second) {
+      int count = second - first + 1;
+
+        int sum = 0;
+        int i = first;
+        while (i <= second) {
+            if (i % 7 == 0) {
+                sum += i;
+            }
+            i++;
+        }
+        return (float) sum / count;
+    }
+
+    public void printFibonacciNumbers(int count){
+        int a = 0;
+        int b = 1;
+
+        int sum = 0;
+
+        System.out.println(a);
+        System.out.println(b);
+
+        int i = 3;
+        while (i <= count) {
+            sum = a + b;
+
+            System.out.println(sum);
+
+            a = b;
+            b = sum;
+
+            i++;
+        }
+    }
+
+    public void getprintCozaLozaWoza () {
+        int number = 1;
+        while (number <= 110) {
+            if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
+                System.out.print("CozaLozaWoza");
+            } else if (number % 5 == 0 && number % 7 == 0) {
+                System.out.print("WozaLoza");
+            } else if(number % 3 == 0 && number % 7 == 0) {
+                System.out.print("CozaWoza");
+            } else if (number % 3 == 0 && number % 5 == 0) {
+                  System.out.print("CozaLoza");
+            } else if (number % 7 == 0) {
+                System.out.print("Woza");
+            } else if (number % 5 == 0) {
+                System.out.print("Loza");
+            } else if (number % 3 == 0) {
+                System.out.print("Coza");
+            } else {
+                System.out.print(number);
+            }
+
+            System.out.print(" ");
+
+            if (number % 11 == 0){
+                System.out.println();
+            }
+            number += 1;
+        }
+    }
 }
+
