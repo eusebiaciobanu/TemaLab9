@@ -16,10 +16,9 @@ public class LogicalOp {
     }
 
     public String checkFastTractItAndNumber(String text, int number) {
-        if (text.equals("FastTrackIT") && number <= 3){
+        if (text.equals("FastTrackIT") && number <= 3) {
             return text + " " + number;
-        } else if(!text.equals("FastTrackIT") && number >= 4)
-        {
+        } else if (!text.equals("FastTrackIT") && number >= 4) {
             return number + " " + text;
         }
 
@@ -37,11 +36,9 @@ public class LogicalOp {
     public String compareWithThreeAndFour(int i) {
         if (i > 3 && i != 4) {
             return "The number is greater than 3 and not equal to 4";
-        }
-        else if (i == 4) {
+        } else if (i == 4) {
             return "The number is equal to 4";
-        }
-        else if (i < 3) {
+        } else if (i < 3) {
             return "The number is lower than 3";
         } else {
             return "not available";
@@ -57,14 +54,11 @@ public class LogicalOp {
     }
 
     public int biggestNumber(int x, int y, int z) {
-        if (x>y && x>z) {
+        if (x > y && x > z) {
             return x;
-        }
-        else if (y>x && y>z) {
+        } else if (y > x && y > z) {
             return y;
-        }
-        else
-        {
+        } else {
             return z;
         }
     }
@@ -101,13 +95,13 @@ public class LogicalOp {
     }
 
     public void printEvenNumbers() {
-        for (int i = 2; i <= 100; i=i+2) {
+        for (int i = 2; i <= 100; i = i + 2) {
             System.out.println(i);
         }
     }
 
     public void printOddNumbers() {
-        for (int i = 1; i <= 100; i=i+2) {
+        for (int i = 1; i <= 100; i = i + 2) {
             System.out.println(i);
         }
     }
@@ -125,17 +119,17 @@ public class LogicalOp {
     public float printAverageInRange(int number) {
         int sum = 0;
 
-        for(int i= number; i <= 100; i++) {
-            sum = sum+i;
+        for (int i = number; i <= 100; i++) {
+            sum = sum + i;
         }
 
         int countNumbers = 100 - number + 1;
 
-        return (float) sum / countNumbers ;
+        return (float) sum / countNumbers;
     }
 
-    public void printAsterisk (int numberOfLines){
-        for (int i = numberOfLines; i >= 1; i-- ) {
+    public void printAsterisk(int numberOfLines) {
+        for (int i = numberOfLines; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print('*');
             }
@@ -144,7 +138,7 @@ public class LogicalOp {
         }
     }
 
-    public void printFromNumberTo100WithWhile (int number){
+    public void printFromNumberTo100WithWhile(int number) {
         int i = number;
 
         while (i <= 100) {
@@ -154,7 +148,7 @@ public class LogicalOp {
         }
     }
 
-    public void printFromNumberToMinus100WithWhile(int number){
+    public void printFromNumberToMinus100WithWhile(int number) {
         int i = number;
 
         while (i >= -100) {
@@ -187,18 +181,20 @@ public class LogicalOp {
             i++;
         }
     }
-    public void printEvenNumbersFromOneToOneHundred () {
+
+    public void printEvenNumbersFromOneToOneHundred() {
         int number = 2;
         while (number <= 100) {
-                System.out.println(number);
+            System.out.println(number);
 
             number += 2;
         }
     }
-    public void printOddNumbersFromOneToHundred () {
+
+    public void printOddNumbersFromOneToHundred() {
         int number = 1;
         while (number <= 99) {
-            System.out.println (number);
+            System.out.println(number);
 
             number += 2;
         }
@@ -217,13 +213,13 @@ public class LogicalOp {
             i++;
         }
 
-        System.out.println ("Suma este:" + sum);
+        System.out.println("Suma este:" + sum);
 
-        System.out.println ("Media este:" + (float) sum / count);
+        System.out.println("Media este:" + (float) sum / count);
     }
 
-    public float getAverageOfNumberInRageDivisibleBySeven (int first, int second) {
-      int count = second - first + 1;
+    public float getAverageOfNumberInRageDivisibleBySeven(int first, int second) {
+        int count = second - first + 1;
 
         int sum = 0;
         int i = first;
@@ -236,7 +232,7 @@ public class LogicalOp {
         return (float) sum / count;
     }
 
-    public void printFibonacciNumbers(int count){
+    public void printFibonacciNumbers(int count) {
         int a = 0;
         int b = 1;
 
@@ -258,17 +254,17 @@ public class LogicalOp {
         }
     }
 
-    public void getprintCozaLozaWoza () {
+    public void getprintCozaLozaWoza() {
         int number = 1;
         while (number <= 110) {
             if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
                 System.out.print("CozaLozaWoza");
             } else if (number % 5 == 0 && number % 7 == 0) {
                 System.out.print("WozaLoza");
-            } else if(number % 3 == 0 && number % 7 == 0) {
+            } else if (number % 3 == 0 && number % 7 == 0) {
                 System.out.print("CozaWoza");
             } else if (number % 3 == 0 && number % 5 == 0) {
-                  System.out.print("CozaLoza");
+                System.out.print("CozaLoza");
             } else if (number % 7 == 0) {
                 System.out.print("Woza");
             } else if (number % 5 == 0) {
@@ -281,11 +277,125 @@ public class LogicalOp {
 
             System.out.print(" ");
 
-            if (number % 11 == 0){
+            if (number % 11 == 0) {
                 System.out.println();
             }
             number += 1;
         }
     }
-}
 
+    public void printGenerateArray() {
+        int[] array = new int[100];
+
+        for (int i = 1; i <= 100; i++) {
+            array[i - 1] = i;
+
+            System.out.println(array[i - 1]);
+        }
+    }
+
+    public int[] printEvenNumbersWithArray() {
+        int[] array = new int[50];
+
+        int poz = 0;
+        for (int i = 2; i <= 100; i += 2) {
+            array[poz] = i;
+
+            poz++;
+        }
+
+        return array;
+    }
+
+    public float getArrayAverage(int[] numbers) {
+        int sum = 0;
+
+        for (int number : numbers) {
+            sum += number;
+        }
+
+        return (float) sum / numbers.length;
+    }
+
+    public boolean checkElemInArray(String[] array, String search) {
+        for (String value : array) {
+            if (search == value) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public int getPositionInArray(int[] Numbers, int number) {
+        for (int i = 0; i < Numbers.length; i++) {
+            if (Numbers[i] == number) {
+                return i;
+            }
+        }
+
+        return 0;
+    }
+
+    public void getGridDisplay() {
+        char[] data = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-'};
+
+        for (int i = 1; i <= 10; i++) {
+            for (char elem : data) {
+                System.out.print(elem);
+            }
+
+            System.out.println();
+        }
+    }
+
+    public int[] getArrayWithoutNumber(int[] Numbers, int number) {
+        int[] helpNumbers = new int[Numbers.length];
+
+        int poz = 0;
+        for (int i = 0; i < Numbers.length; i++) {
+            if (Numbers[i] != number) {
+                helpNumbers[poz++] = Numbers[i];
+            }
+        }
+
+        int[] newNumbers = new int[poz];
+
+        for (int i = 0; i < poz; i++) {
+            newNumbers[i] = helpNumbers[i];
+        }
+
+        return newNumbers;
+    }
+
+    public int getSecondMinimNumber(int[] numbers) {
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (min > numbers[i]) {
+                min = numbers[i];
+            }
+        }
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (secondMin > numbers[i] && numbers[i] > min) {
+                secondMin = numbers[i];
+            }
+        }
+
+        return secondMin;
+    }
+
+
+    public void copyArrayInArray(int[] first, int[] second) {
+
+        for (int i = 0; i < first.length; i++) {
+            second[i] = first[i];
+        }
+
+        for (int i = 0; i < second.length; i++) {
+            System.out.println(second[i]);
+        }
+    }
+}

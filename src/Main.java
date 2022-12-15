@@ -161,6 +161,68 @@ public class Main {
 
         System.out.println("--- Exercitiu #10 ---");
         op.getprintCozaLozaWoza();
+
+        System.out.println("--- Tema arrays ---");
+
+        System.out.println("--- Exercitiu #1 ---");
+
+        System.out.println("sum 2 int: " + calculator.sum(3, 5));
+        System.out.println("sum 2 float: " + calculator.sum(3, 5.7f));
+        System.out.println("sum 3 float: " + calculator.sum(2.5f, 3, 5.7f));
+        System.out.println("sum 3 int: " + calculator.sum(2.8f, 6, 5.9f));
+        System.out.println("substract 2 float: " + calculator.substract( 2.5f, 3.5f));
+        System.out.println("substract 3 float: " + calculator.substract( 1.2f, 2.4f, 5.5f));
+        System.out.println("substract 3 int: " + calculator.substract( 3, 5, 9));
+        System.out.println("substract 4 int: " + calculator.substract( 2, 8, 10, 20));
+        System.out.println("multiplicate 4 int: " + calculator.multiplicate( 2, 4, 5, 3));
+        System.out.println("multiplicate 4 float: " + calculator.multiplicate( 3.1f, 3.2f, 3.3f, 3.4f ));
+        System.out.println("divison 3 float: " + calculator.division(100f, 70f, 10f));
+        System.out.println("divison 3 int: " + calculator.division( 1000, 100, 10));
+        System.out.println("divison 4 int: " + calculator.division( 100000, 1000, 100, 10));
+
+        System.out.println("--- Exercitiu #2 ---");
+
+        op.printGenerateArray();
+
+        System.out.println("--- Exercitiu #3 ---");
+        int[] array = op.printEvenNumbersWithArray();
+        for(int x : array) {
+            System.out.println(x);
+        }
+
+        System.out.println("--- Exercitiu #4 ---");
+        int[] arrayOfNumbers = {3, 4, 5};
+
+        System.out.println("getArrayAverage: " + op.getArrayAverage(arrayOfNumbers));
+
+        System.out.println("--- Exercitiu #5 ---");
+        String[] arrayOfStrings = {"a", "b", "c"};
+
+        System.out.println(op.checkElemInArray(arrayOfStrings, "a") ? "found" : "not found");
+        System.out.println(op.checkElemInArray(arrayOfStrings, "d") ? "found" : "not found");
+
+        System.out.println("--- Exercitiu #6 ---");
+        System.out.println(op.getPositionInArray(arrayOfNumbers, 4));
+
+        System.out.println("--- Exercitiu #7 ---");
+        op.getGridDisplay();
+
+        System.out.println("--- Exercitiu #8 ---");
+
+        int[] rez = op.getArrayWithoutNumber(arrayOfNumbers, 4);
+        for(int y : rez) {
+            System.out.println(y);
+        }
+
+        System.out.println("--- Exercitiu #9 ---");
+        arrayOfNumbers = new int[]{3, 2, 4, 1, 5, 6};
+        System.out.println(op.getSecondMinimNumber(arrayOfNumbers));
+
+        System.out.println("--- Exercitiu #10 ---");
+
+        int[] secondArray = new int[arrayOfNumbers.length];
+        op.copyArrayInArray(arrayOfNumbers, secondArray);
+
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {

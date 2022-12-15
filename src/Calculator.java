@@ -1,20 +1,52 @@
 public class Calculator {
+    public int sum(int first, int second) {
+        return first + second;
+    }
     public float sum(float first, float second) {
         return first + second;
     }
 
-    public float substract(float first, float second){
-        return first - second;
+    public float sum(float first, float second, float third) {
+        return first + second + third;
+    }
+    public int sum(int first, int second, int third) {
+        return first + second + third;
+    }
+
+    public float substract (float first, float second){return first - second;}
+
+    public float substract (float first, float second, float third) {
+        return first - second - third;
+    }
+
+    public int substract (int first, int second, int third) {
+        return first - second - third;
+    }
+    public int substract (int first, int second, int third, int fourth) {
+        return first - second - third - fourth;
     }
 
     public float multiplicate(float first, float second){
         return first * second;
     }
-
+    public float multiplicate (int first, int second, int third, int fourth) {
+        return first * second * third * fourth;
+    }
+    public float multiplicate (float first, float second, float third, float fourth) {
+        return first * second * third * fourth;
+    }
     public float division(float first, float second){
         return first / second;
     }
-
+    public float division(float first, float second, float third) {
+        return first / second / third;
+    }
+    public float division(int first, int second, int third) {
+        return (float) first / second / third;
+    }
+    public float division(int first, int second, int third, int fourth) {
+        return (float) first / second / third / fourth;
+    }
     public float divisionReminder(float first, float second){
         return first % second;
     }
@@ -23,8 +55,6 @@ public class Calculator {
     {
         return (float) 5/9 * (value - 32);
     }
-
-
 
     public float convertInchToMeter(float value)
     {
