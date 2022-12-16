@@ -398,4 +398,97 @@ public class LogicalOp {
             System.out.println(second[i]);
         }
     }
+
+    public void elementOnSpecificPositionArray(int number, int[] array, int position) {
+        int[] largerArray = new int[array.length + 1];
+
+        for (int i = 0; i < array.length; i++) {
+            largerArray[i] = array[i];
+        }
+
+        for (int i = largerArray.length - 1; i > position; i--) {
+            largerArray[i] = largerArray[i - 1];
+        }
+
+        largerArray[position] = number;
+
+        for (int i = 0; i < largerArray.length; i++) {
+            System.out.println(largerArray[i]);
+        }
+    }
+
+    public void findLargestSmallestNumber(int[] array) {
+        int largest = array[0], smallest = array[0];
+
+        for (int i = 0; i < array.length; i++) {
+            if (smallest > array[i]) {
+                smallest = array[i];
+            }
+            if (largest < array[i]) {
+                largest = array[i];
+            }
+        }
+        System.out.println(smallest);
+        System.out.println(largest);
+    }
+
+    //3. Creati o metoda care sa inverseze valorile unui array de int-uri.
+
+    public void reverseTheValueOfAnarrayofInts(int[] array) {
+        for (int i = 0; i < array.length / 2; i++) {
+            int j = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = j;
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
+    public void duplicateElementsOfAnArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    System.out.println(arr[j]);
+                }
+            }
+        }
+    }
+
+    public void commonElementsInArray(String[] arr1, String[] arr2) {
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    System.out.println(arr1[i]);
+                }
+            }
+        }
+    }
+
+    // 5, 2, 8, 1, 9
+    // 2, 5, 8, 1, 9
+    // 2, 5, 1, 8, 9
+    // 2, 1, 5, 8, 9
+    // 1, 2, 5, 8, 9
+
+
+    public int[] receiveTheSortedArray(int[] arr) {
+        int aux = 0;
+        boolean isSorted = false;
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < arr.length -1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    aux = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = aux;
+                    isSorted = false;
+                }
+            }
+        }
+
+        return arr;
+    }
 }
+
+

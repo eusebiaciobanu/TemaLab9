@@ -223,6 +223,35 @@ public class Main {
         int[] secondArray = new int[arrayOfNumbers.length];
         op.copyArrayInArray(arrayOfNumbers, secondArray);
 
+        System.out.println("--- Tema optionala arrays ---");
+
+        System.out.println("--- Exercitiu #1 ---");
+
+        op.elementOnSpecificPositionArray(77, arrayOfNumbers, 3);
+
+        System.out.println("--- Exercitiu #2 ---");
+        int[] testArray = {2, 6, 8, 1, 9, 3};
+        op.findLargestSmallestNumber(testArray);
+
+        System.out.println("--- Exercitiu #3 ---");
+        int[] testArray2 = {6, 7, 8, 9, 10};
+        op.reverseTheValueOfAnarrayofInts(testArray2);
+
+        System.out.println("--- Exercitiu #4 ---");
+        int[] testArray3 = {4, 5, 6, 7, 8, 2, 5, 4};
+        op.duplicateElementsOfAnArray(testArray3);
+
+        System.out.println("--- Exercitiu #5 ---");
+        String[] arr1 = {"abc", "asd"};
+        String[] arr2 = {"zds", "bcd", "sl", "tst", "asd"};
+        op.commonElementsInArray(arr1, arr2);
+
+        System.out.println("--- Exercitiu #6 ---");
+        int[] arr = {9, 7, 4, 8, 6};
+       int[] response = op.receiveTheSortedArray(arr);
+       for (int i = 0; i < response.length; i++){
+           System.out.println(response[i]);
+       }
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {
