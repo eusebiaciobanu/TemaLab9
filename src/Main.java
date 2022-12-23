@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
@@ -14,10 +18,10 @@ public class Main {
 
         System.out.println("--- Exercitiu #2 ---");
 
-        System.out.println("Rezultatul adunarii este: " + calculator.sum(2,3.4f));
-        System.out.println("Rezultatul scaderii este: " + calculator.substract(2.5f,3));
-        System.out.println("Rezultatul inmultirii este: " + calculator.multiplicate(4f,3));
-        System.out.println("Rezultatul impartirii este: " + calculator.division(6,3));
+        System.out.println("Rezultatul adunarii este: " + calculator.sum(2, 3.4f));
+        System.out.println("Rezultatul scaderii este: " + calculator.substract(2.5f, 3));
+        System.out.println("Rezultatul inmultirii este: " + calculator.multiplicate(4f, 3));
+        System.out.println("Rezultatul impartirii este: " + calculator.division(6, 3));
 
         System.out.println("--- Exercitiu #3 ---");
 
@@ -33,7 +37,7 @@ public class Main {
 
         System.out.println("--- Exercitiu #6 ---");
 
-        System.out.println("Restul impartirii este: " + calculator.divisionReminder(4,3));
+        System.out.println("Restul impartirii este: " + calculator.divisionReminder(4, 3));
 
         System.out.println("--- Exercitiu #7 ---");
 
@@ -49,7 +53,7 @@ public class Main {
 
         LogicalOp op = new LogicalOp();
 
-        System.out.println("The biggest number is: " + op.getBiggestNumber(2,3));
+        System.out.println("The biggest number is: " + op.getBiggestNumber(2, 3));
 
         System.out.println("FastTrackIt valid: " + op.checkFastTractIt("FastTrackIT"));
         System.out.println("FastTrackIt invalid: " + op.checkFastTractIt("random"));
@@ -115,7 +119,7 @@ public class Main {
 
         System.out.println("--- Exercitiu #8 ---");
 
-        System.out.println("printAverageInRange: " + op.printAverageInRange( 53));
+        System.out.println("printAverageInRange: " + op.printAverageInRange(53));
 
         System.out.println("--- Exercitiu #9 ---");
 
@@ -170,15 +174,15 @@ public class Main {
         System.out.println("sum 2 float: " + calculator.sum(3, 5.7f));
         System.out.println("sum 3 float: " + calculator.sum(2.5f, 3, 5.7f));
         System.out.println("sum 3 int: " + calculator.sum(2.8f, 6, 5.9f));
-        System.out.println("substract 2 float: " + calculator.substract( 2.5f, 3.5f));
-        System.out.println("substract 3 float: " + calculator.substract( 1.2f, 2.4f, 5.5f));
-        System.out.println("substract 3 int: " + calculator.substract( 3, 5, 9));
-        System.out.println("substract 4 int: " + calculator.substract( 2, 8, 10, 20));
-        System.out.println("multiplicate 4 int: " + calculator.multiplicate( 2, 4, 5, 3));
-        System.out.println("multiplicate 4 float: " + calculator.multiplicate( 3.1f, 3.2f, 3.3f, 3.4f ));
+        System.out.println("substract 2 float: " + calculator.substract(2.5f, 3.5f));
+        System.out.println("substract 3 float: " + calculator.substract(1.2f, 2.4f, 5.5f));
+        System.out.println("substract 3 int: " + calculator.substract(3, 5, 9));
+        System.out.println("substract 4 int: " + calculator.substract(2, 8, 10, 20));
+        System.out.println("multiplicate 4 int: " + calculator.multiplicate(2, 4, 5, 3));
+        System.out.println("multiplicate 4 float: " + calculator.multiplicate(3.1f, 3.2f, 3.3f, 3.4f));
         System.out.println("divison 3 float: " + calculator.division(100f, 70f, 10f));
-        System.out.println("divison 3 int: " + calculator.division( 1000, 100, 10));
-        System.out.println("divison 4 int: " + calculator.division( 100000, 1000, 100, 10));
+        System.out.println("divison 3 int: " + calculator.division(1000, 100, 10));
+        System.out.println("divison 4 int: " + calculator.division(100000, 1000, 100, 10));
 
         System.out.println("--- Exercitiu #2 ---");
 
@@ -186,7 +190,7 @@ public class Main {
 
         System.out.println("--- Exercitiu #3 ---");
         int[] array = op.printEvenNumbersWithArray();
-        for(int x : array) {
+        for (int x : array) {
             System.out.println(x);
         }
 
@@ -210,7 +214,7 @@ public class Main {
         System.out.println("--- Exercitiu #8 ---");
 
         int[] rez = op.getArrayWithoutNumber(arrayOfNumbers, 4);
-        for(int y : rez) {
+        for (int y : rez) {
             System.out.println(y);
         }
 
@@ -248,10 +252,74 @@ public class Main {
 
         System.out.println("--- Exercitiu #6 ---");
         int[] arr = {9, 7, 4, 8, 6};
-       int[] response = op.receiveTheSortedArray(arr);
-       for (int i = 0; i < response.length; i++){
-           System.out.println(response[i]);
-       }
+        int[] response = op.receiveTheSortedArray(arr);
+        for (int i = 0; i < response.length; i++) {
+            System.out.println(response[i]);
+        }
+        Lists lists = new Lists();
+        System.out.println("--- Tema lists ---");
+        System.out.println("--- Exercitiu #1 ---");
+
+        List<Integer> test = new ArrayList<Integer>();
+        test.add(5);
+        test.add(6);
+        test.add(2);
+
+        lists.listAddExamples(test);
+
+        System.out.println("--- Exercitiu #2 ---");
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(2);
+        list.add(4);
+        list.add(6);
+        lists.addElementToList(list, 5);
+        for (Integer i : list) {
+            System.out.println(i);
+        }
+        System.out.println("--- Exercitiu #3 ---");
+        List<Integer> displaylist = new ArrayList<Integer>();
+        displaylist.add(6);
+        displaylist.add(5);
+        displaylist.add(4);
+        displaylist.add(3);
+        displaylist.add(2);
+        displaylist.add(1);
+        lists.displayListValues(displaylist, 3);
+
+        System.out.println("--- Exercitiu #4 ---");
+        List<Integer> Reverse = new ArrayList<Integer>();
+        Reverse.add(10);
+        Reverse.add(8);
+        Reverse.add(6);
+        lists.displayListInReverse(Reverse);
+
+
+        System.out.println("--- Exercitiu #5 ---");
+        List<String> List = new ArrayList<>();
+        List.add("pisica");
+        List.add("soricel");
+
+        lists.addStringToList(List, 1, "flori");
+
+        System.out.println(List);
+
+        System.out.println("--- Exercitiu #6 ---");
+        List<Integer> element = new ArrayList<>();
+        element.add(10);
+        element.add(11);
+        element.add(12);
+
+        lists.addNumberToFirstPosition(element, 9);
+        System.out.println(element);
+
+        System.out.println("--- Exercitiu #7 ---");
+        List<Object> myList = Arrays.asList("valoare1", "valoare2", "valoare3");
+        lists.printListAndElements(myList);
+
+        System.out.println("--- Exercitiu #8 ---");
+        List<Integer> numbers = Arrays.asList(6, 7, 8, 9, 10);
+        int biggest = lists.findBiggestNumber(numbers);
+        System.out.println("Biggest number: " + biggest);
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {
