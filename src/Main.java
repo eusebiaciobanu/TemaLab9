@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Calculator calculator = new Calculator();
 
         System.out.println("--- Exercitiu #1 ---");
@@ -320,6 +320,24 @@ public class Main {
         List<Integer> numbers = Arrays.asList(6, 7, 8, 9, 10);
         int biggest = lists.findBiggestNumber(numbers);
         System.out.println("Biggest number: " + biggest);
+
+        System.out.println("--- Tema optionala lists ---");
+        System.out.println("--- Exercitiu #1 ---");
+        List<Integer> myList2 = Arrays.asList(2, 7, 8, 9);
+        lists.swapElements(myList2, 1, 3);
+        System.out.println(myList2);
+
+
+        System.out.println("--- Exercitiu #2 ---");
+        List<Integer> myList3 = Arrays.asList(1, 2, 3, 4, 5);
+        lists.getEvenNumbers(myList3);
+        System.out.println(lists.getEvenNumbers(myList3));
+
+        System.out.println("--- Exercitiu #3 ---");
+        List<Integer> myList4 = Arrays.asList(2, 4, 9, 6, 1, 8, 5, 7);
+        lists.sortList(myList4);
+       System.out.println(lists.sortList(myList4));
+
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {
@@ -336,6 +354,8 @@ public class Main {
         System.out.println("Meters per second: " + calculator.calculateMetersPerSecond(meters, totalSeconds));
         System.out.println("Kilometers per hour: " + calculator.calculateKilometersPerHour(kilometers, totalHours));
         System.out.println("Miles per hour: " + calculator.convertKilometersToMiles(kilometersPerHour));
+
+
     }
 
 

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Lists {
@@ -46,5 +48,28 @@ public class Lists {
 
         }
         return biggest;
+    }
+    public void swapElements(List<Integer> list, int index1, int index2) throws Exception {
+        if (index1 < 0 || index2 < 0 || index1 >= list.size() || index2 >= list.size())
+        {
+          throw new Exception("Invalid indices");
+        }
+        Integer temp = list.get(index1);
+        list.set(index1, list.get(index2));
+        list.set(index2, temp);
+    }
+
+     public List<Integer> getEvenNumbers(List<Integer> numbers) {
+        List<Integer> evenNumbers = new ArrayList<>();
+        for( Integer number : numbers){
+            if ( number % 2 == 0){
+                evenNumbers.add(number);
+            }
+        }
+        return evenNumbers;
+    }
+     public List<Integer> sortList(List<Integer> unsortedList){
+        unsortedList.sort(Integer::compareTo);
+        return unsortedList;
     }
 }
