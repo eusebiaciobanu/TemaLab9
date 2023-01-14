@@ -1,4 +1,7 @@
+import java.util.List;
+
 public class LogicalOp {
+
     public int getBiggestNumber(int first, int second) {
         if (first > second) {
             return first;
@@ -490,6 +493,23 @@ public class LogicalOp {
         return arr;
     }
 
+    public void displayArrayValue(List<Integer> numbers, int index) {
+        try {
+            System.out.println(numbers.get(index));
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Inside catch, numbers too large");
+        }
+    }
+
+    public int wait(int second){
+        try{
+            Thread.sleep(second * 1000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+
+        }
+        return second;
+    }
 }
 
 

@@ -338,6 +338,40 @@ public class Main {
         lists.sortList(myList4);
        System.out.println(lists.sortList(myList4));
 
+        System.out.println("--- Tema - Try-Catch ---");
+        System.out.println("--- Exercitiu #1 ---");
+        Read myRead = new Read();
+        int valueInt = myRead.readInt();
+        System.out.println(valueInt);
+
+        System.out.println("--- Exercitiu #2 ---");
+
+        double valueDouble = myRead.readDouble();
+        System.out.println(valueDouble);
+
+        float valueFloat = myRead.readFloat();
+        System.out.println(valueFloat);
+
+        String valueString = myRead.readString();
+        System.out.println(valueString);
+
+
+        System.out.println("--- Exercitiu #3 ---");
+        myRead.getNumbersFromKeyboard(5);
+
+        System.out.println("--- Exercitiu #4 ---");
+        myRead.getNumberFromKeyboard();
+
+        System.out.println("--- Exercitiu #5 ---");
+        List<Integer> myList6 = Arrays.asList(2, 4, 9, 6, 1, 8, 5, 7);
+        op.displayArrayValue(myList6, 7);
+
+        System.out.println("--- Exercitiu #6 ---");
+        op.wait(3);
+
+
+
+
     }
 
     private static void printSpeed(float meters, int hours, int minutes, int seconds) {
